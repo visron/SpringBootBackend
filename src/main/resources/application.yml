@@ -1,0 +1,14 @@
+Spring:
+  datasource:
+    url: jdbc:mysql://localhost:8889/testSpring
+    username: dav
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
