@@ -6,16 +6,18 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Column;
+import javax.persistence.*;
 
 
 @Getter
 @Setter
-@Entity
-@Table
+@Entity(name = "Product")
+@Table(name = "product")
 public class Product {
 
     @Id
+    @GeneratedValue
+    @Column(name = "`id`")
     private int id;
         @Column(name = "`name`")
     private String name;

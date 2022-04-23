@@ -67,12 +67,12 @@ use the following SQL statement
 
 Next, you have to grant external connection access (Mysql blocks this by default);
 
-> CREATE USER 'root'@'%' IDENTIFIED BY '{MYSQL PASSWORD}';
-> 
-> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
-> 
+> CREATE USER 'root'@'*' IDENTIFIED BY {mysql password};
+>
+> GRANT ALL ON *.* TO 'root'@'*';
+>
 > FLUSH PRIVILEGES;
 
+Now you can start the app; the app will connect to the Mysql database.
 
-Now you can start the springBootBackend app; the app will connect to the Mysql database, will query the database.
 
